@@ -18,6 +18,7 @@ const {
  *       type: object
  *       required:
  *         - schoolName
+ *         - countryCode
  *         - address
  *         - latitude
  *         - longitude
@@ -30,6 +31,9 @@ const {
  *         schoolName:
  *           type: string
  *           description: School Name
+ *         countryCode:
+ *           type: string
+ *           description: Country ISO Code
  *         address:
  *           type: string
  *           description: School address

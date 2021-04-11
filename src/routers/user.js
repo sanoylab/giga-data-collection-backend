@@ -18,6 +18,7 @@ const {
  *       type: object
  *       required:
  *         - userName
+ *         - email
  *         - password
  *         - userType
  *       properties:
@@ -27,6 +28,9 @@ const {
  *         userName:
  *           type: string
  *           description: User Name
+ *         email:
+ *           type: string
+ *           description: Email address
  *         password:
  *           type: string
  *           description: Password

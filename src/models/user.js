@@ -6,6 +6,12 @@ const userSchema = new mongoose.Schema({
         trim: true,
         required: [true, "Please enter username"]
     },
+    email: {
+        type: String,
+        trim: true,
+        require: [true, "Please enter your email address"],
+        unique: [true, "Email address is already registered"],       
+    },
     password: {
         type: String, 
         trim: true,

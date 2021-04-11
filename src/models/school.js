@@ -7,6 +7,11 @@ const schoolSchema = new mongoose.Schema({
         trim: true,
         required: [true, "Please enter school name"]
     },
+    countryCode:{
+        type: String,
+        trim: true,
+        required: [true, "Please enter iso country code"]
+    },
     address: {
         type: String,
         trim: true,
