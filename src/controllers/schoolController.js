@@ -2,7 +2,7 @@ const School = require('../models/school');
 
 module.exports.getSchools = async(req, res) => {
     try{
-        const schools = await School.find({}).populate({path: 'schoolPostedBy', select: 'userName'});
+        const schools = await School.find({}).populate({path: 'schoolPostedBy', select: 'userName email'});
         res.send(schools)
     }catch(e){
         res.send(e).status(500);
@@ -11,7 +11,7 @@ module.exports.getSchools = async(req, res) => {
 
 module.exports.getSchool = async (req, res) => {
     try{
-        const school = await School.find({_id: req.params.id}).populate({path: 'schoolPostedBy', select: 'userName'});
+        const school = await School.find({_id: req.params.id}).populate({path: 'schoolPostedBy', select: 'userName email'});
         res.send(school)
     }catch(e){
         res.send(e).status(500);
